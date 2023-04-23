@@ -1,0 +1,45 @@
+{{#if
+  functions
+}}{{! Replace `functions` with other objects for templating. -K }}
+  {{#with this}}
+    <ul>
+      <li>
+        <section>
+          <div>
+            <h3>{{name}}</h3>
+            <br />
+            <strong>Version: </strong>{{version}}
+            <br />
+            <br />
+            <em>{{description}}</em>
+          </div>
+          <br />
+          <h4>functions: </h4>
+          {{#each functions}}
+            <div>
+              <ul>
+                <li>
+                  <b>{{name}}</b>
+                  -
+                  <em>{{description}}</em>
+                  <br />
+                  <br />
+                  {{#each parameters}}
+                    <ul>
+                      <li>{{name}}
+                        -
+                        {{type}}
+                        -
+                        {{description}}</li>
+                    </ul>
+                  {{/each}}
+                  <br />
+                </li>
+              </ul>
+            </div>
+          {{/each}}
+        </section>
+      </li>
+    </ul>
+  {{/with}}
+{{/if}}
