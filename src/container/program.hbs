@@ -1,0 +1,132 @@
+<div>
+  <main>
+    {{#with program.excursion}}
+      <section>
+        <div>
+          <h1>IT Brains World Tour Schedule</h1>
+        </div>
+      </section>
+      <hr />
+      <section>
+        <div>
+          <div>
+            <strong>Tour Type: </strong><u>{{name}}</u>
+          </div>
+          <br />
+          <div>
+            {{#with location}}
+              <b>Location: </b>
+              <u>
+                {{city}},
+                {{country}}
+              </u>
+            {{/with}}
+          </div>
+          <br />
+          <div>
+            <strong>Date: </strong><date>{{date}}</date>
+          </div>
+        </div>
+      </section>
+      {{#each program}}
+        <ul>
+          <li>
+            <section>
+              <div>
+                <strong>Tour Agenda: </strong><em>{{name}}</em>
+                <br />
+                <em>Type: </em>{{type}}
+                <br />
+                <em>Duration (hrs): </em>{{duration}}
+              </div>
+              <br />
+              {{#if details.museum}}
+                {{#with details}}
+                  <div>
+                    <u>Museum Information</u>
+                    <br />
+                    <br />
+                    <b>{{museum.name}}</b>
+                    {{#with museum.location}}
+                      <div>
+                        <strong>Address:</strong><br />
+                        <address>
+                          {{address}},
+                          {{city}},
+                          {{country}}
+                        </address>
+                      </div>
+                    {{/with}}
+                  </div>
+                  <br>
+                  <div>
+                    <u>Exhibits:</u>
+                    <ul>
+                      {{#each museum.exhibits}}
+                        <li>{{name}} by {{artist}}</li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <br>
+                  <div>
+                    {{#with ../details}}   
+                      {{#with guide}}
+                        <u>Guide: </u> {{name}}
+                        <br>
+                        Language Spoken: <u>{{language}}</u>
+                        <br>
+                        <u>Rating:</u> {{rating}}
+                      {{/with}}
+                    {{/with}}
+                  </div>
+                {{/with}}
+              {{/if}}
+              {{#if details.venue}}
+                {{#with details}}
+                  <div>
+                    <u>Venue Information</u>
+                    <br />
+                    <br />
+                    <b>{{venue.name}}</b>
+                    {{#with venue.location}}
+                      <div>
+                        <strong>Address:</strong>
+                        <address>
+                          {{address}},
+                          {{city}},
+                          {{country}}
+                        </address>
+                      </div>
+                    {{/with}}
+                  </div>
+                  <br>
+                  <div>
+                    <u>Performers:</u>
+                    <ul>
+                      {{#each performers}}
+                        <li>{{name}} - {{type}}</li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <br>
+                  <div>
+                    {{#with ../details}}   
+                      {{#with guide}}
+                        <u>Guide: </u> {{name}}
+                        <br>
+                        Language Spoken: <u>{{language}}</u>
+                        <br>
+                        <u>Rating:</u> {{rating}}
+                      {{/with}}
+                    {{/with}}
+                  </div>
+                {{/with}}
+              {{/if}}
+            </section>
+          </li>
+          </section>
+        </ul>
+      {{/each}}
+    {{/with}}
+  </main>
+</div>
