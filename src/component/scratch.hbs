@@ -1,45 +1,102 @@
-{{#if
-  functions
-}}{{! Replace `functions` with other objects for templating. -K }}
-  {{#with this}}
-    <ul>
-      <li>
-        <section>
-          <div>
-            <h3>{{name}}</h3>
-            <br />
-            <strong>Version: </strong>{{version}}
-            <br />
-            <br />
-            <em>{{description}}</em>
-          </div>
+<div>
+  <main>
+    <h1>{{name}} Users</h1>
+    {{#each users}}
+      <section>
+        <div>
+          <hr />
+          <hr />
           <br />
-          <h4>functions: </h4>
-          {{#each functions}}
-            <div>
-              <ul>
-                <li>
-                  <b>{{name}}</b>
-                  -
-                  <em>{{description}}</em>
-                  <br />
-                  <br />
-                  {{#each parameters}}
-                    <ul>
-                      <li>{{name}}
-                        -
-                        {{type}}
-                        -
-                        {{description}}</li>
-                    </ul>
-                  {{/each}}
-                  <br />
-                </li>
-              </ul>
-            </div>
+          (<b>ID: </b>{{id}})
+          <u>{{name}}</u>
+          /
+          {{age}}
+          /
+          <em>{{gender}}</em>
+          <br />
+          <br />
+          <br />
+          <strong>Friends:</strong>
+          {{#each friends}}
+            <ul>
+              <li>
+                (<b>ID: </b>{{id}})
+                <u>{{name}}</u>
+                /
+                {{age}}
+                /
+                <em>{{gender}}</em>
+                <br />
+                <br />
+                <em><strong>mutual:</strong></em>
+                {{#each mutual_friends}}
+                  <ul>
+                    <li>
+                      (<b>ID: </b>{{id}})
+                      <u>{{name}}</u>
+                      /
+                      {{age}}
+                      /
+                      <em>{{gender}}</em>
+                      <br />
+                      {{#each mutual_friends}}
+                        <em>mutual:</em>
+                        <br />
+                        <ul>
+                          <li>
+                            (<b>ID: </b>{{id}})
+                            <u>{{name}}</u>
+                            /
+                            {{age}}
+                            /
+                            <em>{{gender}}</em>
+                            <br />
+                          </li>
+                        </ul>
+                      {{/each}}
+                    </li>
+                  </ul>
+                {{/each}}
+              </li>
+            </ul>
+            <br />
           {{/each}}
-        </section>
-      </li>
-    </ul>
-  {{/with}}
+          <strong>Groups:</strong>
+          {{#each groups}}
+            <ul>
+              <li>
+                (<b>ID: </b>{{id}})
+                <u>{{name}}</u>
+                /
+                {{age}}
+                /
+                <em>{{description}}</em>
+                <br />
+                <br />
+                <em><strong>Members</strong></em>
+                {{#each members}}
+                  <ul>
+                    <li>
+                      (<b>ID: </b>{{id}})
+                      <u>{{name}}</u>
+                      /
+                      {{age}}
+                      /
+                      <em>{{gender}}</em>
+                      <br />
+                    </li>
+                  </ul>
+                {{/each}}
+              </li>
+            </ul>
+            <br />
+          {{/each}}
+        </div>
+      </section>
+    {{/each}}
+  </main>
+</div>
+
+{{#if groups}}
+  Group of Mutual Friend
 {{/if}}
