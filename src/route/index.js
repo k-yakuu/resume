@@ -88,7 +88,6 @@ router.get('/summary', function (req, res) {
     footer,
   })
 }),
-
   // ================================================================
 
   //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -153,7 +152,6 @@ router.get('/summary', function (req, res) {
       footer,
     })
   }),
-  
   // ================================================================
 
   //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -207,7 +205,6 @@ router.get('/summary', function (req, res) {
       footer,
     })
   }),
-  
   // ================================================================
 
   //              ↙ тут вводимо шлях (PATH) до сторінки
@@ -281,11 +278,8 @@ router.get('/summary', function (req, res) {
       footer,
     })
   }),
-  
-  
   // ================================================================
-  
-  
+
   //              ↙ тут вводимо шлях (PATH) до сторінки
   router.get('/person', function (req, res) {
     //             ↙ cюди вводимо назву файлу з сontainer
@@ -389,8 +383,7 @@ router.get('/summary', function (req, res) {
       },
     })
   })
-  
-  
+
 // ================================================================
 
 router.get('/bio', function (req, res) {
@@ -493,7 +486,6 @@ router.get('/bio', function (req, res) {
 
 // ================================================================
 
-
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
@@ -580,7 +572,6 @@ router.get('/program', function (req, res) {
 })
 
 // ================================================================
-
 
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -797,7 +788,8 @@ router.get('/mac', function (req, res) {
         },
       ],
     },
-
+  })
+})
 // ================================================================
 
 router.get('/car', function (req, res) {
@@ -805,7 +797,7 @@ router.get('/car', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('car', {
-    layout: "basic",
+    layout: 'basic',
 
     make: 'Toyota',
     model: 'Camry',
@@ -981,9 +973,7 @@ router.get('/js', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-
 // ================================================================
-
 
 // router.get Створює нам один ентпоїнт
 
