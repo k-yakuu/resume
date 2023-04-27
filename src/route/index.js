@@ -805,7 +805,7 @@ router.get('/car', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('car', {
-    layout: 'basic',
+    layout: "basic",
 
     make: 'Toyota',
     model: 'Camry',
@@ -895,6 +895,9 @@ router.get('/car', function (req, res) {
       },
       total: 28990,
     },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 // ================================================================
 
@@ -1143,7 +1146,5 @@ router.get('/facebook', function (req, res) {
 })
 
 // ================================================================
-
-
 
 module.exports = router
