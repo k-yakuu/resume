@@ -56,8 +56,6 @@ router.get('/', function (req, res) {
 router.get('/summary', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('summary', {
-    layout: 'basic',
-
     page: {
       title: 'Resume | Summary',
     },
@@ -94,8 +92,6 @@ router.get('/summary', function (req, res) {
   router.get('/skills', function (req, res) {
     //             ↙ cюди вводимо назву файлу з сontainer
     res.render('skills', {
-      layout: 'basic',
-
       page: {
         title: 'Resume | Skills',
       },
@@ -158,8 +154,6 @@ router.get('/summary', function (req, res) {
   router.get('/education', function (req, res) {
     //             ↙ cюди вводимо назву файлу з сontainer
     res.render('education', {
-      layout: 'basic',
-
       page: {
         title: 'Resume | Education',
       },
@@ -211,8 +205,6 @@ router.get('/summary', function (req, res) {
   router.get('/work', function (req, res) {
     //             ↙ cюди вводимо назву файлу з сontainer
     res.render('work', {
-      layout: 'basic',
-
       page: {
         title: 'Resume | Work',
       },
@@ -284,8 +276,6 @@ router.get('/summary', function (req, res) {
   router.get('/person', function (req, res) {
     //             ↙ cюди вводимо назву файлу з сontainer
     res.render('person', {
-      layout: 'basic',
-
       person: {
         name: 'Emma Johnson',
         age: 32,
@@ -389,8 +379,6 @@ router.get('/summary', function (req, res) {
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
-    layout: 'basic',
-
     person: {
       name: 'Albert Einstein',
       birthdate: 'March 14, 1879',
@@ -489,8 +477,6 @@ router.get('/bio', function (req, res) {
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
-    layout: 'basic',
-
     program: {
       excursion: {
         name: 'Cultural Tour',
@@ -576,8 +562,6 @@ router.get('/program', function (req, res) {
 router.get('/web', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('web', {
-    layout: 'basic',
-
     web: {
       languages: [
         {
