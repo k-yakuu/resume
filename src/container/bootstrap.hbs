@@ -1,118 +1,115 @@
-<main>
-
-  <div class='row g-2'>
+<main class='p-5'>
+  <div class='row g-5'>
+    {{!Email vert template}}
     <div class='col-12'>
-      {{!flex column forces vertical of class type  }}
-      <div class='nav nav-tabs'>
-        <div class='nav-item'>
-          <a
-            href='/bootstrap'
-            class='nav-link active disabled'
-          >
-            Home
-          </a>
-        </div>
-        <div class='nav-item'>
-          <a href='/task31' class='nav-link'>
-            task31
-          </a>
-        </div>
-        <div class='nav-item'>
-          <a href='task21' class='nav-link'>
-            task21
-          </a>
-        </div>
-        <div class='nav-item'>
-          <a href='/task22' class='nav-link'>
-            task22
-          </a>
-        </div>
-      </div>
+      <label classs='form-label'>Email Address</label>
+      <input class='form-control' />
+      <div class='form-text text-danger'>Error.</div>
     </div>
-    <div class='col-2'>
-      <div class='card'>
-        <div class='py-4'>
-          {{!flex column forces vertical of class type  }}
-          <div class='nav flex-column'>
-            <div class='nav-item pb-2'>
-              <div class='card'>
-                <a
-                  href='/bootstrap'
-                  class='nav-link text-bg-warning disabled'
-                >
-                  Home
-                </a>
-              </div>
+    {{!Email horiz template}}
+    <div class='col-12'>
+        <div class="row">
+            <div class='col-2 pt-1'>
+              <label classs='form-label'>Email</label>
             </div>
-            <div class='nav-item pb-2'>
-              <div class='card'>
-                <a
-                  href='/task31'
-                  class='nav-link text-bg-warning'
-                >
-                  task31
-                </a>
-              </div>
+            <div class='col-6'>
+              <input class='form-control' />
             </div>
-            <div class='nav-item pb-2'>
-              <div class='card'>
-                <a
-                  href='task21'
-                  class='nav-link text-bg-warning'
-                >
-                  task21
-                </a>
-              </div>
-            </div>
-            <div class='nav-item pb-2'>
-              <div class='card'>
-                <a
-                  href='/task22'
-                  class='nav-link text-bg-warning'
-                >
-                  task22
-                </a>
-              </div>
-            </div>
-          </div>
+            <div class='col-4 ps-2 pt-1'>
+              <div class='form-text text-danger ps-5'>Error.Please enter an email.</div>
         </div>
-      </div>
     </div>
-    <div class='col-8'>
-      <div class='row'>
-        <div class='col-12'>
-          <ol class='breadcrumb'>
-            <li class='breadcrumb-item'>
-              <a href='#'>
-                Home
-              </a>
-            </li>
-            <li class='breadcrumb-item'>
-              <a href='#'>
-                Catalogs
-              </a>
-            </li>
-            <li class='breadcrumb-item'>
-              Project Type
-            </li>
-          </ol>
-        </div>
-        <div class='cold-12'>
-          <button class='btn btn-primary'>TEST</button>
-          <div class='alert alert-dark m-2'>
-            <h6 class='m-0'>Bootstrap World
-              <span
-                class='badge text-bg-warning rounded-pill text-uppercase'
-              >test</span></h6>
-          </div>
 
+
+    <div class="py-3">
+      <hr />
+    </div>
+
+    {{!Color horiz template}}
+    <div class='col-12'>
+        <div class="row">
+            <div class='col-1 pt-1'>
+              <label classs='form-label'>Color</label>
+            </div>
+            <div class='col-1'>
+              <input type="color" class='form-control' />{{!color type}}
+            </div>
+            <div class='col-4 pt-1'>
+              <div class='form-text text-danger ps-5'>Error.Please select a color.</div>
         </div>
-      </div>
     </div>
-    <div class='col-2'>
-      <div class='card'>Test</div>
+    
+    <div class="py-3">
+      <hr />
     </div>
+
+    {{! Select template vert}}
+    <div class='col-12 py-2' >
+        <label classs='form-label'>Select Role</label>
+        <select class='form-select' />
+            <option selected>Open List</option>
+            <option value="1">Admin</option>
+            <option value="2">User</option>
+        </select>
+        <div class='form-text text-danger'>
+            Error.Please select a role.
+        </div>
+    </div>
+
+    <div class="py-3">
+      <hr />
+    </div>
+
+    {{! Form-check template vert}}
+    <div class="col-12">
+        <div class="form-check">
+            <label class="form-check-label">Apples</label>
+            <input name="food" type="checkbox" class="form-check-input">
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">Bananas</label>
+            <input name="food" type="checkbox" class="form-check-input">
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">Sneakers</label>
+            <input name="clothes" type="checkbox" class="form-check-input">
+        </div>
+    </div>
+
+    <div class="py-3">
+      <hr />
+    </div>
+
+    {{! Radio-check template vert}} 
+    <div class="col-12">
+        <div class="form-check">
+            <label class="form-check-label">Apples</label>
+            <input name="food" type="radio" class="form-check-input">
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">Bananas</label>
+            {{! name attr is what groups the radio selection into only one possible category(selection)}} 
+            <input name="food" type="radio" class="form-check-input">
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">Salmon</label>
+            <input name="food" type="radio" class="form-check-input">
+        </div>
+    </div>
+
+
+    <div class="py-3">
+      <hr />
+    </div>
+
+    {{! Switch-field template vert}} 
+    <div class="col-12">
+        <div class="form-check form-switch">
+            <label class="form-switch-label">Ignite Enemy</label>
+            <input type="checkbox" class="form-check-input">
+        </div>
+    </div>
+
 
   </div>
-
 </main>
